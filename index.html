@@ -3,169 +3,367 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Darshmehar Singh Lamba | Portfolio</title>
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f5f0;
+    color:#222;
+    line-height:1.6;
+}
+
+header{
+    background:#4e342e;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+}
+
+.logo{
+    color:white;
+    font-size:1.5rem;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d7b899;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.profile{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+    border:4px solid #4e342e;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero h3{
+    color:#6d4c41;
+    margin:10px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#4e342e;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#4e342e;
+}
+
+.skill-grid,
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card,
+.project-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.project-card img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+#achievements ul{
+    max-width:700px;
+    margin:auto;
+}
+
+#achievements li{
+    margin:12px 0;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+textarea{
+    min-height:120px;
+}
+
+button{
+    padding:12px;
+    border:none;
+    background:#4e342e;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#4e342e;
+    color:white;
+}
+
+/* Mobile Responsive */
+
+@media (max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+        margin-top:15px;
+    }
+
+    .hero{
+        padding:80px 20px;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero h3{
+        font-size:1rem;
+    }
+
+    .profile{
+        width:140px;
+        height:140px;
+    }
+
+    section{
+        padding:60px 20px;
+    }
+
+    .skill-grid,
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <nav>
-        <h2 class="logo">Darshmehar</h2>
+<nav>
+<h2 class="logo">Darshmehar</h2>
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 </header>
 
 <section id="home" class="hero">
-    <div class="hero-content">
+<div>
 
-        <img src="images/profile.jpg" alt="Profile Photo" class="profile">
+<img src="images/profile.jpg" alt="Profile Photo" class="profile">
 
-        <h1>Darshmehar Singh Lamba</h1>
+<h1>Darshmehar Singh Lamba</h1>
 
-        <h3>Computer Information Systems Student</h3>
+<h3>Computer Information Systems Student</h3>
 
-        <p>
-            AI Enthusiast • Robotics Explorer • Software Developer
-        </p>
+<p>
+AI Enthusiast • Robotics Explorer • Software Developer
+</p>
 
-        <a href="resume/Darshmehar_Resume.pdf" class="btn" target="_blank">
-            Download Resume
-        </a>
+<a href="#" class="btn">Download Resume</a>
 
-    </div>
+</div>
 </section>
 
 <section id="about">
-    <h2>About Me</h2>
 
-    <p>
-        I am a Computer Information Systems student passionate about Artificial
-        Intelligence, Robotics, Machine Learning, and Software Development.
-        My goal is to create intelligent systems that solve real-world problems.
-    </p>
+<h2>About Me</h2>
 
-    <p>
-        With a background in Electronics & Communication Engineering, I have
-        worked on innovative projects ranging from smart waste management systems
-        to AI-powered applications.
-    </p>
+<p>
+I am a Computer Information Systems student passionate about Artificial Intelligence, Robotics, Machine Learning, and Software Development. My goal is to create intelligent systems that solve real-world problems.
+</p>
+
+<br>
+
+<p>
+With a background in Electronics & Communication Engineering, I have worked on innovative projects ranging from smart waste management systems to AI-powered applications.
+</p>
+
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
 
-    <div class="skill-grid">
+<h2>Skills</h2>
 
-        <div class="card">
-            <h3>Programming</h3>
-            <p>Python, Java, JavaScript, SQL</p>
-        </div>
+<div class="skill-grid">
 
-        <div class="card">
-            <h3>Web Development</h3>
-            <p>HTML, CSS, JavaScript, GitHub</p>
-        </div>
+<div class="card">
+<h3>Programming</h3>
+<p>Python, Java, JavaScript, SQL</p>
+</div>
 
-        <div class="card">
-            <h3>AI & Robotics</h3>
-            <p>Machine Learning, ROS2, Computer Vision</p>
-        </div>
+<div class="card">
+<h3>Web Development</h3>
+<p>HTML, CSS, JavaScript, GitHub</p>
+</div>
 
-        <div class="card">
-            <h3>Tools</h3>
-            <p>VS Code, MySQL, Git, Canva</p>
-        </div>
+<div class="card">
+<h3>AI & Robotics</h3>
+<p>Machine Learning, ROS 2, Computer Vision</p>
+</div>
 
-    </div>
+<div class="card">
+<h3>Tools</h3>
+<p>VS Code, MySQL, Git, Canva</p>
+</div>
+
+</div>
 </section>
 
 <section id="projects">
 
-    <h2>Projects</h2>
+<h2>Projects</h2>
 
-    <div class="project-grid">
+<div class="project-grid">
 
-        <div class="project-card">
-            <img src="images/smart-bin.jpg">
-            <h3>Smart Waste Segregation System</h3>
+<div class="project-card">
+<img src="images/smart-bin.jpg" alt="">
+<h3>Smart Waste Segregation System</h3>
+<p>
+AI-powered waste segregation system separating biodegradable, non-biodegradable, and liquid waste.
+</p>
+</div>
 
-            <p>
-                AI-powered waste segregation system separating biodegradable,
-                non-biodegradable and liquid waste.
-            </p>
-        </div>
+<div class="project-card">
+<img src="images/car-project.jpg" alt="">
+<h3>Phone Controlled Car</h3>
+<p>
+Remote-controlled smart vehicle operated using a smartphone.
+</p>
+</div>
 
-        <div class="project-card">
-            <img src="images/car-project.jpg">
-            <h3>Phone Controlled Car</h3>
+<div class="project-card">
+<img src="images/chatbot.jpg" alt="">
+<h3>Python Voice Assistant</h3>
+<p>
+Developed an intelligent assistant inspired by Siri and Google Assistant.
+</p>
+</div>
 
-            <p>
-                Remote controlled smart vehicle operated via smartphone.
-            </p>
-        </div>
-
-        <div class="project-card">
-            <img src="images/chatbot.jpg">
-            <h3>Python Voice Assistant</h3>
-
-            <p>
-                Developed an intelligent assistant inspired by Siri and
-                Google Assistant.
-            </p>
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 <section id="achievements">
 
-    <h2>Achievements</h2>
+<h2>Achievements</h2>
 
-    <ul>
-        <li>State Level INSPIRE-Manak Award</li>
-        <li>SOF Competition Winner</li>
-        <li>District Level Table Tennis Recognition</li>
-        <li>Rubik's Cube Champion</li>
-    </ul>
+<ul>
+<li>🏆 State-Level INSPIRE-Manak Award</li>
+<li>🏆 SOF Competition Recognition</li>
+<li>🏓 District-Level Table Tennis Achievement</li>
+<li>🧩 Rubik's Cube Champion</li>
+</ul>
 
 </section>
 
 <section id="contact">
 
-    <h2>Contact Me</h2>
+<h2>Contact Me</h2>
 
-    <form>
+<form>
 
-        <input type="text" placeholder="Your Name">
+<input type="text" placeholder="Your Name" required>
 
-        <input type="email" placeholder="Your Email">
+<input type="email" placeholder="Your Email" required>
 
-        <textarea placeholder="Your Message"></textarea>
+<textarea placeholder="Your Message"></textarea>
 
-        <button type="submit">Send Message</button>
+<button type="submit">Send Message</button>
 
-    </form>
+</form>
 
 </section>
 
 <footer>
-    <p>© 2026 Darshmehar Singh Lamba. All Rights Reserved.</p>
+<p>© 2026 Darshmehar Singh Lamba. All Rights Reserved.</p>
 </footer>
-
-<script src="js/script.js"></script>
 
 </body>
 </html>
