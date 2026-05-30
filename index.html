@@ -3,215 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Darshmehar Singh Lamba | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#f8f5f0;
-    color:#222;
-    line-height:1.6;
+background:#f8f5f0;
+color:#222;
+line-height:1.6;
 }
 
 header{
-    background:#4e342e;
-    position:sticky;
-    top:0;
-    z-index:1000;
+background:#4e342e;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
 }
 
 .logo{
-    color:white;
-    font-size:1.5rem;
+color:white;
+font-size:1.5rem;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:20px;
+display:flex;
+list-style:none;
+gap:20px;
+flex-wrap:wrap;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#d7b899;
+color:white;
+text-decoration:none;
 }
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
 }
 
 .profile{
-    width:200px;
-    height:200px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:20px;
-    border:4px solid #4e342e;
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #4e342e;
+margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:3rem;
+font-size:3rem;
 }
 
 .hero h3{
-    color:#6d4c41;
-    margin:10px 0;
+color:#6d4c41;
+margin:10px 0;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#4e342e;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#4e342e;
+color:white;
+text-decoration:none;
+border-radius:8px;
 }
 
 section{
-    padding:80px 10%;
+padding:80px 10%;
 }
 
 section h2{
-    text-align:center;
-    margin-bottom:30px;
-    color:#4e342e;
+text-align:center;
+margin-bottom:30px;
+color:#4e342e;
 }
 
 .skill-grid,
 .project-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card,
 .project-card{
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 .project-card img{
-    width:100%;
-    border-radius:10px;
-    margin-bottom:15px;
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
 }
 
 #achievements ul{
-    max-width:700px;
-    margin:auto;
+max-width:800px;
+margin:auto;
 }
 
 #achievements li{
-    margin:12px 0;
+margin:12px 0;
 }
 
 form{
-    max-width:600px;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
 }
 
 input,
 textarea{
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:8px;
-}
-
-textarea{
-    min-height:120px;
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
 }
 
 button{
-    padding:12px;
-    border:none;
-    background:#4e342e;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
+padding:12px;
+border:none;
+background:#4e342e;
+color:white;
+border-radius:8px;
+cursor:pointer;
 }
 
 footer{
-    text-align:center;
-    padding:25px;
-    background:#4e342e;
-    color:white;
+text-align:center;
+padding:25px;
+background:#4e342e;
+color:white;
 }
 
-/* Mobile Responsive */
+@media(max-width:768px){
 
-@media (max-width:768px){
+nav{
+flex-direction:column;
+}
 
-    nav{
-        flex-direction:column;
-    }
+nav ul{
+flex-direction:column;
+text-align:center;
+margin-top:15px;
+}
 
-    nav ul{
-        flex-direction:column;
-        text-align:center;
-        margin-top:15px;
-    }
+.hero h1{
+font-size:2rem;
+}
 
-    .hero{
-        padding:80px 20px;
-    }
+.hero h3{
+font-size:1rem;
+}
 
-    .hero h1{
-        font-size:2rem;
-    }
+.profile{
+width:140px;
+height:140px;
+}
 
-    .hero h3{
-        font-size:1rem;
-    }
-
-    .profile{
-        width:140px;
-        height:140px;
-    }
-
-    section{
-        padding:60px 20px;
-    }
-
-    .skill-grid,
-    .project-grid{
-        grid-template-columns:1fr;
-    }
+section{
+padding:60px 20px;
+}
 }
 </style>
 </head>
@@ -225,11 +205,15 @@ footer{
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
 <li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#achievements">Achievements</a></li>
+<li><a href="#interests">Interests</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
+
 </nav>
 </header>
 
@@ -240,13 +224,17 @@ footer{
 
 <h1>Darshmehar Singh Lamba</h1>
 
-<h3>Computer Information Systems / Electronics and Communication Engineering </h3>
+<h3>
+Computer Information Systems |
+Electronics & Communication Engineering |
+AI & Robotics Enthusiast
+</h3>
 
 <p>
 AI Enthusiast • Robotics Explorer • Software Developer
 </p>
 
-<a href="#" class="btn">Download Resume</a>
+<a href="resume.pdf" class="btn">Download Resume</a>
 
 </div>
 </section>
@@ -256,14 +244,28 @@ AI Enthusiast • Robotics Explorer • Software Developer
 <h2>About Me</h2>
 
 <p>
-I am a Computer Information Systems student passionate about Artificial Intelligence, Robotics, Machine Learning, and Software Development. My goal is to create intelligent systems that solve real-world problems.
+I'm Darshmehar Singh Lamba, a Computer Information Systems student at the University of the Fraser Valley with a background in Electronics and Communication Engineering. I am passionate about Artificial Intelligence, Machine Learning, Robotics, and Software Development.
 </p>
 
-<br>
+</section>
 
-<p>
-With a background in Electronics & Communication Engineering, I have worked on innovative projects ranging from smart waste management systems to AI-powered applications.
-</p>
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="skill-grid">
+
+<div class="card">
+<h3>University of the Fraser Valley</h3>
+<p>Computer Information Systems</p>
+</div>
+
+<div class="card">
+<h3>Chandigarh College of Engineering & Technology</h3>
+<p>Diploma in Electronics & Communication Engineering</p>
+</div>
+
+</div>
 
 </section>
 
@@ -285,15 +287,32 @@ With a background in Electronics & Communication Engineering, I have worked on i
 
 <div class="card">
 <h3>AI & Robotics</h3>
-<p>Machine Learning, ROS 2, Computer Vision</p>
+<p>Machine Learning, ROS2, Computer Vision</p>
 </div>
 
 <div class="card">
 <h3>Tools</h3>
-<p>VS Code, MySQL, Git, Canva</p>
+<p>VS Code, Git, MySQL, Canva</p>
 </div>
 
 </div>
+
+</section>
+
+<section id="experience">
+
+<h2>Experience</h2>
+
+<div class="skill-grid">
+
+
+<div class="card">
+<h3>Digital Marketing</h3>
+<p>Promotional content creation and video production.</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="projects">
@@ -303,27 +322,28 @@ With a background in Electronics & Communication Engineering, I have worked on i
 <div class="project-grid">
 
 <div class="project-card">
-<img src="images/smart-bin.jpg" alt="">
 <h3>Smart Waste Segregation System</h3>
-<p>
-AI-powered waste segregation system separating biodegradable, non-biodegradable, and liquid waste.
-</p>
+<p>Automatic waste segregation system.</p>
 </div>
 
 <div class="project-card">
-<img src="images/car-project.jpg" alt="">
 <h3>Phone Controlled Car</h3>
-<p>
-Remote-controlled smart vehicle operated using a smartphone.
-</p>
+<p>Smartphone-controlled robotic vehicle.</p>
 </div>
 
 <div class="project-card">
-<img src="images/chatbot.jpg" alt="">
 <h3>Python Voice Assistant</h3>
-<p>
-Developed an intelligent assistant inspired by Siri and Google Assistant.
-</p>
+<p>AI assistant inspired by Siri and Google Assistant.</p>
+</div>
+
+<div class="project-card">
+<h3>University Website</h3>
+<p>Comprehensive university information website.</p>
+</div>
+
+<div class="project-card">
+<h3>Canva Training Manual</h3>
+<p>Detailed Canva training guide.</p>
 </div>
 
 </div>
@@ -335,11 +355,31 @@ Developed an intelligent assistant inspired by Siri and Google Assistant.
 <h2>Achievements</h2>
 
 <ul>
-<li>🏆 State-Level INSPIRE-Manak Award</li>
-<li>🏆 SOF Competition Recognition</li>
+<li>🏆 State-Level INSPIRE-Manak Award Winner</li>
+<li>🏆 SOF Science Olympiad Recognition</li>
 <li>🏓 District-Level Table Tennis Achievement</li>
 <li>🧩 Rubik's Cube Champion</li>
+<li>🏃 400m Marathon Participant</li>
+<li>🤝 NGO Volunteer</li>
+<li>🙏 Kar Sewa Dal Volunteer</li>
 </ul>
+
+</section>
+
+<section id="interests">
+
+<h2>Interests & Specializations</h2>
+
+<div class="skill-grid">
+
+<div class="card">Artificial Intelligence</div>
+<div class="card">Machine Learning</div>
+<div class="card">Robotics</div>
+<div class="card">Computer Vision</div>
+<div class="card">Software Development</div>
+<div class="card">Digital Marketing</div>
+
+</div>
 
 </section>
 
@@ -362,7 +402,11 @@ Developed an intelligent assistant inspired by Siri and Google Assistant.
 </section>
 
 <footer>
-<p>© 2026 Darshmehar Singh Lamba. All Rights Reserved.</p>
+
+<p>
+© 2026 Darshmehar Singh Lamba. All Rights Reserved.
+</p>
+
 </footer>
 
 </body>
